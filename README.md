@@ -2,6 +2,6 @@
 
 [Rubel (Isadora Zuffo)](/files/IsadoraZuffo.html)
 
-singer 2
+[Rod Wave (Maya Oli)](files/MayaOli.html)
 
-singer 3
+[Bon Jovi (Zoja Pletersěk)](files/bon_jovi.html)
