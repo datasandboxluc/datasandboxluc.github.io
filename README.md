@@ -24,4 +24,14 @@
 
 [Hozier (Maud Pals)](files/project_hozier.html)
 
+# Reports from Previous Years
 
+<ul>
+  {% for thing in site.pages %}
+    {% if thing.identifier == 'course-index' %}
+  <li>
+    <a href="{{ thing.url }}">{{ thing.title }}, {{ thing.block }}</a>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>
