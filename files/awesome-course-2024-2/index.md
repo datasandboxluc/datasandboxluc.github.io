@@ -1,6 +1,6 @@
 ---
-title: Awesome Course
-block: Spring 2024
+title: DS Course
+block: AY 2024-25 Block 3
 identifier: course-index
 ---
 
