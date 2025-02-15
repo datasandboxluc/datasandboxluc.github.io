@@ -16,14 +16,22 @@
 
 <div id="main-layout">
 
-    <div class="menu">
+    <div id="menu-collapsed" class="hide">
+        <div id="freestanding-hamburger" class="hamburger" onclick="menuCollapsedOnClick()">
+            <div class="hamburger-slice"></div>
+            <div class="hamburger-slice"></div>
+            <div class="hamburger-slice"></div>
+        </div>
+    </div>
+
+    <div id="menu" class="menu">
         <div class="menu-header" style="display: flex; flex-direction: row; justify-content: space-between">
             Menu
 
-            <div class="hamburger">
-                <div class="hamburger-slice" ></div>
-                <div class="hamburger-slice" ></div>
-                <div class="hamburger-slice" ></div>
+            <div id="menu-hamburger" class="hamburger" onclick="menuOnClick()">
+                <div class="hamburger-slice"></div>
+                <div class="hamburger-slice"></div>
+                <div class="hamburger-slice"></div>
             </div>
 
         </div>
@@ -39,9 +47,9 @@
             {% endif %}
             {% endfor %}
 
-<!--            <div class="menu-item clickable"><a href="#">Page 2</a></div>-->
-<!--            <div class="menu-item clickable"><a href="#">Page 3 is longer</a></div>-->
-<!--            <div class="menu-item clickable"><a href="#">Page 4</a></div>-->
+            <!--            <div class="menu-item clickable"><a href="#">Page 2</a></div>-->
+            <!--            <div class="menu-item clickable"><a href="#">Page 3 is longer</a></div>-->
+            <!--            <div class="menu-item clickable"><a href="#">Page 4</a></div>-->
             </ul>
         </nav>
     </div>
@@ -95,6 +103,24 @@
     </div>
 
 </div>
+
+<script>
+    function menuOnClick() {
+        const menu = document.getElementById("menu");
+        menu.classList.add("hide");
+
+        const menuCollapsed = document.getElementById("menu-collapsed");
+        menuCollapsed.classList.remove("hide");
+    }
+
+    function menuCollapsedOnClick() {
+        const menu = document.getElementById("menu");
+        menu.classList.remove("hide");
+
+        const menuCollapsed = document.getElementById("menu-collapsed");
+        menuCollapsed.classList.add("hide");
+    }
+</script>
 
 </body>
 </html>
