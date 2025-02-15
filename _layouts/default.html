@@ -17,14 +17,31 @@
 <div id="main-layout">
 
     <div class="menu">
-        <div class="menu-header">
+        <div class="menu-header" style="display: flex; flex-direction: row; justify-content: space-between">
             Menu
+
+            <div class="hamburger">
+                <div class="hamburger-slice" ></div>
+                <div class="hamburger-slice" ></div>
+                <div class="hamburger-slice" ></div>
+            </div>
+
         </div>
         <nav>
-            <div class="menu-item"><a href="#">Page 1</a></div>
-            <div class="menu-item"><a href="#">Page 2</a></div>
-            <div class="menu-item"><a href="#">Page 3 is longer</a></div>
-            <div class="menu-item"><a href="#">Page 4</a></div>
+            <div class="menu-item clickable"><a href="#">Home</a></div>
+            <div class="menu-item-header">Previous Sessions</div>
+
+            {% for thing in site.pages %}
+            {% if thing.identifier == 'course-index' %}
+            <div class="menu-item clickable">
+                <a href="{{ thing.url }}">{{ thing.title }}, {{ thing.block }}</a>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+<!--            <div class="menu-item clickable"><a href="#">Page 2</a></div>-->
+<!--            <div class="menu-item clickable"><a href="#">Page 3 is longer</a></div>-->
+<!--            <div class="menu-item clickable"><a href="#">Page 4</a></div>-->
             </ul>
         </nav>
     </div>
