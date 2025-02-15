@@ -1,0 +1,96 @@
+---
+---
+
+@import "jekyll-theme-slate";
+
+#main-layout {
+    display: flex;
+    flex-direction: row;
+    //justify-items: start;
+    //justify-content: space-between;
+    flex: auto;
+}
+
+#main-content-wrap {
+    display:flex;
+    align-items: center;
+}
+
+#main {
+    flex: auto;
+}
+
+.menu {
+    min-width: 200px;
+    border: 4px solid #f2f2f2;
+    border-radius: 4px;
+    background: linear-gradient(to top, #373737, #212121);
+}
+
+.menu-collapsed {
+    padding: 10px 4px;
+    border: 4px solid #f2f2f2;
+    background: linear-gradient(to top, #373737, #212121);
+}
+
+.hide {
+    display: none;
+}
+
+.menu-header {
+    padding: 10px;
+    background-color: #373737; // #f2f2f2;
+    font-weight: 800;
+    color: #f2f2f2;
+}
+
+.menu-item {
+    background-color: #212121;
+    padding: 4px 10px;
+    //padding-top: 10px;
+    //padding-bottom: 10px;
+    flex: auto;
+
+    color: #f2f2f2;
+
+    a {
+        color: inherit;
+    }
+}
+
+.menu-item-header {
+    background-color: #2c2c2c;
+    padding: 15px 10px 4px;
+    flex: auto;
+    font-weight: 800;
+    color: #f2f2f2;
+}
+
+div.clickable:hover {
+    background-color: #2b2b2b;
+}
+
+.menu nav {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger {
+    border: 2px solid #f2f2f2;
+    border-radius: 6px;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .hamburger-slice {
+        background-color: #f2f2f2;
+        height: .2rem;
+        margin-left: .1rem;
+        margin-right: .1rem;
+    }
+}
